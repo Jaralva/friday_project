@@ -9,10 +9,21 @@ import {Navigate} from "react-router-dom";
 import {PasswordRepair} from "./UniqComponents/passwordRepair/PasswordRepair";
 import {Registration} from "./UniqComponents/registration/Registration";
 import {TestComponent} from "./UniqComponents/testComponent/TestComponent";
+import {Profile} from "./UniqComponents/profile/Profile";
 
 function App() {
   return (
     <div className="App">
+
+      <NewPassword/>
+      <FourZeroFourError/>
+      <Login/>
+      <PasswordRepair/>
+      <Profile/>
+      <Registration/>
+      <TestComponent/>
+
+
       <Routes>
         <Route path="/anewpassword" element={<NewPassword/>}/>
         <Route path="/404" element={<FourZeroFourError/>}/>
@@ -22,6 +33,7 @@ function App() {
         <Route path="/test" element={<TestComponent/>}/>
         <Route path="*" element={<Navigate to="/404"/>}/>
       </Routes>
+
     </div>
   );
 }
